@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Casa Stellins Revenue Engine: strumento privato per analisi dei dati di mercato degli affitti brevi e gestione dei report su Google Drive.">
+  <meta name="color-scheme" content="light">
+  <title>Casa Stellins Revenue Engine | Home</title>
+  <style>
+    :root{--navy:#162a42;--blue:#276b84;--teal:#23847f;--text:#1f3141;--muted:#607080;--surface:#ffffff;--line:#dfe8ec;--bg:#f5f8fa;--shadow:0 16px 42px rgba(13,48,68,.08)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg)}
+    a{color:#126c7d;text-underline-offset:3px}
+    a:hover{color:#094a58}
+    a:focus-visible{outline:3px solid #6bb4d1;outline-offset:4px;border-radius:4px}
+    .shell{max-width:1060px;margin:auto;padding:0 26px}
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .brand{text-decoration:none;color:var(--navy);font-size:17px;font-weight:750;letter-spacing:-.3px}
+    .navlinks{display:flex;gap:25px;align-items:center;flex-wrap:wrap}
+    .navlinks a{text-decoration:none;font-size:14px;font-weight:650}
+    .hero{background:linear-gradient(116deg,#142b44 0%,#205773 60%,#267f7a 100%);color:#fff;padding:86px 0 91px}
+    .hero-inner{max-width:780px}
+    .eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:50px;text-transform:uppercase;font-weight:700;font-size:11px;letter-spacing:1.1px}
+    h1{font-size:clamp(36px,6vw,60px);line-height:1.11;letter-spacing:-1.7px;margin:26px 0 22px;font-weight:780}
+    .lead{font-size:clamp(17px,2.15vw,20px);color:#dbeef2;max-width:730px;margin-bottom:30px}
+    .hero a.cta{display:inline-flex;align-items:center;background:#fff;color:#1c5366;text-decoration:none;padding:12px 20px;border-radius:9px;font-size:14px;font-weight:750}
+    main{padding:62px 0 80px}
+    h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.6px;color:var(--navy);margin:0 0 13px}
+    .intro{color:var(--muted);max-width:800px;margin:0 0 27px}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-bottom:56px}
+    .card{background:var(--surface);border:1px solid var(--line);padding:25px 24px;border-radius:14px;box-shadow:var(--shadow)}
+    .number{display:inline-grid;place-items:center;width:35px;height:35px;background:#e6f4f2;color:#1b716e;border-radius:9px;font-size:13px;font-weight:800}
+    h3{font-size:17px;margin:17px 0 9px;line-height:1.35;color:var(--navy)}
+    .card p{font-size:14px;line-height:1.7;color:#586a78;margin:0}
+    .detail{border:1px solid var(--line);border-radius:15px;background:#fff;padding:28px 30px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .detail p{margin:0 0 12px;color:var(--muted)}
+    .detail p:last-child{margin:0}
+    .label{display:block;color:#23847f;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+    .detail h2{font-size:23px}
+    .info{font-size:14px;color:var(--muted);margin-top:25px}
+    footer{border-top:1px solid var(--line);background:#fff;padding:27px 0}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:#61717e}
+    .foot a{font-weight:700}
+    @media(max-width:690px){.nav{align-items:flex-start;padding:18px 0;flex-direction:column;gap:8px}.hero{padding:66px 0}.cards{grid-template-columns:1fr}.detail{grid-template-columns:1fr;padding:22px}.shell{padding:0 20px}main{padding-top:42px}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="shell nav" aria-label="Navigazione principale">
+      <a class="brand" href="index.html">Casa Stellins <span style="color:#23847f">/ Revenue Engine</span></a>
+      <div class="navlinks"><a href="#funzionamento">Come funziona</a><a href="privacy.html">Privacy</a></div>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="shell hero-inner">
+      <span class="eyebrow">Applicazione privata · Analisi affitti brevi</span>
+      <h1 id="hero-title">Casa Stellins<br>Revenue Engine</h1>
+      <p class="lead">Uno strumento ad uso privato per analizzare i dati di mercato degli affitti brevi, elaborare indicatori e predisporre report a supporto delle decisioni tariffarie.</p>
+      <a class="cta" href="privacy.html">Come vengono trattati i dati →</a>
+    </div>
+  </section>
+
+  <main class="shell">
+    <section id="funzionamento" aria-labelledby="how-title">
+      <h2 id="how-title">Come funziona</h2>
+      <p class="intro">Il sistema collega elaborazioni Python eseguite in ambiente Kaggle a file di configurazione e report conservati in Google Drive, previa autorizzazione del titolare dell'account.</p>
+      <div class="cards">
+        <article class="card"><span class="number" aria-hidden="true">01</span><h3>Configurazione</h3><p>Recupera da cartelle di progetto su Google Drive il codice e i parametri necessari per eseguire le analisi.</p></article>
+        <article class="card"><span class="number" aria-hidden="true">02</span><h3>Elaborazione</h3><p>Analizza osservazioni di mercato, disponibilità e prezzi, generando statistiche, controlli di qualità e modelli previsionali sperimentali.</p></article>
+        <article class="card"><span class="number" aria-hidden="true">03</span><h3>Report e storico</h3><p>Archivia i report generati in Google Drive e mantiene lo storico tecnico dell'elaborazione in Kaggle.</p></article>
+      </div>
+    </section>
+
+    <section class="detail" aria-label="Informazioni sull'applicazione">
+      <div>
+        <span class="label">Accesso Google</span>
+        <h2>Accesso autorizzato, non pubblico</h2>
+        <p>Il collegamento con Google Drive serve esclusivamente alle operazioni autorizzate di lettura dei file del progetto e pubblicazione dei relativi report.</p>
+        <p>L'app non è un servizio di prenotazione rivolto al pubblico e non modifica automaticamente i prezzi degli annunci Airbnb.</p>
+      </div>
+      <div>
+        <span class="label">Trasparenza</span>
+        <h2>Uso e tutela dei dati</h2>
+        <p>I dettagli sui dati trattati, sulle finalità, sulla conservazione e sulle modalità di revoca dell'accesso Google sono descritti nell'informativa.</p>
+        <p><a href="privacy.html">Leggi l'informativa sulla privacy →</a></p>
+      </div>
+    </section>
+    <p class="info">Casa Stellins Revenue Engine è uno strumento operativo privato e non è affiliato a Google, Kaggle o Airbnb.</p>
+  </main>
+
+  <footer>
+    <div class="shell foot"><span>© 2026 Casa Stellins Revenue Engine</span><a href="privacy.html">Informativa sulla privacy</a></div>
+  </footer>
+</body>
+</html>
